@@ -1,0 +1,28 @@
+{
+  "name": "dsh-remote-gateway",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DSH (DeepSeek Harness) 远程访问网关 + 飞书机器人控制 / Remote gateway + Feishu bot for DSH",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "setup": "node setup.js"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "feishu",
+    "lark",
+    "gateway",
+    "reverse-proxy",
+    "bot"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "haoxingsen",
+  "license": "MIT",
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.76.0"
+  }
+}

@@ -1,0 +1,29 @@
+# 可选：headless 模式的默认模型 / 自定义 provider patch。
+# 想让飞书任务走你自己的 OpenAI 兼容接口时，改这份文件，
+# 并保证 config.json 的 headlessPatch 指向它（默认就是本目录 headless-patch.yml）。
+# apiKeyEnv 指向环境变量名，启动网关前 export 对应的 key。
+- id: agent-default-model
+  name: '@deepseek-ai/dsh-agent-default-model'
+  config:
+    provider: my-provider
+    model: my-model
+- id: llm-custom
+  name: '@deepseek-ai/dsh-llm-pi-ai'
+  config:
+    providers:
+      my-provider:
+        apiKeyEnv: MY_PROVIDER_API_KEY
+        api: openai-completions
+        baseURL: https://your-openai-compatible-endpoint/v1
+        models:
+          - id: my-model
+        retryPolicy:
+          mode: normal
+          maxRetries: 3
+          retryableCodes:
+            - EMPTY_RESPONSE
+            - RATE_LIMIT
+            - SERVER
+            - TIMEOUT
+            - TRANSPORT
+            - QUOTA

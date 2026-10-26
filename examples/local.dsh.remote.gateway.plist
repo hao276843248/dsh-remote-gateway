@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>local.dsh.remote.gateway</string>
+  <key>ProgramArguments</key>
+  <array>
+    <!-- node 可执行文件绝对路径，which node 查询 -->
+    <string>/usr/local/bin/node</string>
+    <!-- clone 目录里的 server.js 绝对路径 -->
+    <string>/Users/you/dsh-remote-gateway/server.js</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/you/dsh-remote-gateway</string>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ThrottleInterval</key><integer>10</integer>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <!-- 保证能找到 dsh 命令，按需加你的 npm global bin -->
+    <key>PATH</key><string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin</string>
+    <key>HOME</key><string>/Users/you</string>
+  </dict>
+  <key>StandardOutPath</key><string>/Users/you/dsh-remote-gateway/gateway.log</string>
+  <key>StandardErrorPath</key><string>/Users/you/dsh-remote-gateway/gateway.log</string>
+</dict>
+</plist>

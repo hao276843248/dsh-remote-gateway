@@ -1,0 +1,18 @@
+# 本机真实配置与运行状态，绝不入库
+config.json
+feishu-state.json
+pairing-code.txt
+初始密码.txt
+headless-patch.yml
+
+# 日志与系统文件
+*.log
+.DS_Store
+
+# 内部笔记（含个人环境信息）
+README-部署说明.md
+进度交接-飞书问题.md
+AI-安装飞书机器人.md
+avatar.png
+
+node_modules/

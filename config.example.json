@@ -1,0 +1,17 @@
+{
+ "port": 8765,
+ "upstream": "http://127.0.0.1:3080",
+ "cookieName": "dshauth",
+ "sessionDays": 30,
+ "passwordScrypt": "运行 node setup.js <密码> 自动生成",
+ "sessionSecret": "运行 node setup.js <密码> 自动生成（openssl rand -hex 32）",
+ "dshBin": "dsh",
+ "workdir": "/Users/you/your-workdir",
+ "headlessPatch": "headless-patch.yml",
+ "maxTaskMinutes": 20,
+ "feishu": {
+  "appId": "cli_xxxxxxxxxxxxxxxx",
+  "appSecret": "飞书开放平台-应用的 App Secret",
+  "allowedChatIds": []
+ }
+}

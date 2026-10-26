@@ -1,0 +1,103 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#1b1145"/>
+      <stop offset="55%" stop-color="#0d0b26"/>
+      <stop offset="100%" stop-color="#05060f"/>
+    </radialGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <radialGradient id="glass" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigGlow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="26" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <ellipse cx="300" cy="260" rx="330" ry="240" fill="#6d28d9" opacity="0.32" filter="url(#soft)"/>
+  <ellipse cx="760" cy="740" rx="300" ry="230" fill="#0ea5e9" opacity="0.22" filter="url(#soft)"/>
+  <ellipse cx="720" cy="280" rx="220" ry="160" fill="#db2777" opacity="0.14" filter="url(#soft)"/>
+
+  <!-- 星点 -->
+  <g fill="#e0e7ff">
+    <circle cx="180" cy="150" r="3" opacity=".7"/><circle cx="840" cy="180" r="2.4" opacity=".55"/>
+    <circle cx="120" cy="560" r="2.2" opacity=".45"/><circle cx="905" cy="500" r="2.8" opacity=".6"/>
+    <circle cx="260" cy="880" r="2.4" opacity=".5"/><circle cx="800" cy="905" r="2.2" opacity=".45"/>
+    <circle cx="520" cy="120" r="2.2" opacity=".5"/><circle cx="90" cy="330" r="2" opacity=".4"/>
+    <circle cx="950" cy="320" r="2" opacity=".4"/><circle cx="640" cy="940" r="2" opacity=".4"/>
+  </g>
+  <g stroke="#7dd3fc" stroke-width="2.4" stroke-linecap="round" opacity=".65">
+    <path d="M226 236v22M215 247h22"/>
+    <path d="M868 626v20M858 636h20"/>
+    <path d="M366 128v16M358 136h16"/>
+  </g>
+
+  <!-- 轨道环 -->
+  <circle cx="512" cy="512" r="436" fill="none" stroke="url(#neon)" stroke-width="3" stroke-dasharray="5 16" opacity=".38"/>
+  <circle cx="512" cy="512" r="474" fill="none" stroke="#a78bfa" stroke-width="1.6" stroke-dasharray="2 12" opacity=".22"/>
+  <circle cx="512" cy="76" r="7" fill="#22d3ee" filter="url(#glow)" opacity=".9"/>
+  <circle cx="947" cy="530" r="5.5" fill="#f472b6" filter="url(#glow)" opacity=".8"/>
+
+  <!-- 玻璃底盘 -->
+  <circle cx="512" cy="512" r="382" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.10" stroke-width="2"/>
+
+  <!-- 机器人 -->
+  <g>
+    <!-- 肩膀/身体 -->
+    <path d="M402 614 Q512 588 622 614 L636 656 Q512 690 388 656 Z" fill="#0d1130" stroke="url(#neon)" stroke-width="6" opacity=".95"/>
+    <circle cx="512" cy="648" r="9" fill="#67e8f9" filter="url(#glow)"/>
+    <!-- 天线 -->
+    <line x1="512" y1="332" x2="512" y2="292" stroke="url(#neon)" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="512" cy="278" r="15" fill="#f472b6" filter="url(#bigGlow)"/>
+    <!-- 头 -->
+    <rect x="368" y="330" width="288" height="256" rx="74" fill="#0e1230" fill-opacity=".92" stroke="url(#neon)" stroke-width="9" filter="url(#glow)"/>
+    <!-- 耳侧 -->
+    <rect x="344" y="420" width="26" height="72" rx="13" fill="url(#neon)" opacity=".85"/>
+    <rect x="654" y="420" width="26" height="72" rx="13" fill="url(#neon)" opacity=".85"/>
+    <!-- 面罩 -->
+    <rect x="398" y="366" width="228" height="158" rx="48" fill="#04060f"/>
+    <!-- 眼睛 -->
+    <g filter="url(#bigGlow)">
+      <ellipse cx="468" cy="440" rx="24" ry="30" fill="#67e8f9"/>
+      <ellipse cx="556" cy="440" rx="24" ry="30" fill="#67e8f9"/>
+    </g>
+    <circle cx="474" cy="428" r="7" fill="#ffffff"/>
+    <circle cx="562" cy="428" r="7" fill="#ffffff"/>
+    <!-- 微笑 -->
+    <path d="M482 492 Q512 512 542 492" fill="none" stroke="#7dd3fc" stroke-width="9" stroke-linecap="round" filter="url(#glow)"/>
+    <!-- 额纹装饰 -->
+    <line x1="446" y1="352" x2="578" y2="352" stroke="url(#neon)" stroke-width="4" opacity=".5" stroke-linecap="round"/>
+  </g>
+
+  <!-- 闪电（网关/速度） -->
+  <g transform="translate(700,352) rotate(14)" filter="url(#glow)">
+    <path d="M14 -52 L-22 6 L2 6 L-12 54 L34 -10 L8 -10 Z" fill="url(#bolt)" stroke="#fde047" stroke-width="2"/>
+  </g>
+  <g transform="translate(318,668) rotate(-18)" opacity=".9">
+    <path d="M9 -30 L-13 3 L1 3 L-7 30 L19 -6 L4 -6 Z" fill="#f0abfc" filter="url(#glow)"/>
+  </g>
+
+  <!-- DSH 字样 -->
+  <text x="512" y="792" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="66" font-weight="800" letter-spacing="14" fill="url(#neon)" filter="url(#glow)">DSH</text>
+  <text x="512" y="836" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="600" letter-spacing="10" fill="#93c5fd" opacity=".75">REMOTE GATEWAY</text>
+</svg>
